@@ -7,6 +7,10 @@ public class ArrayListExp {
 		ArrayList<String> sentence = new ArrayList<String>();
 		for(String w : words) sentence.add(w);
 		for(String w : more) sentence.add(w);
+		for(String w : sentence) {
+			System.out.print(w + " ");
+		}
+		System.out.println();
 		return sentence;
 	}
 }
