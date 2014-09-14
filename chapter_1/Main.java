@@ -4,12 +4,13 @@ import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) {
-		while(true) {
-			
+		
 			hashmap_test();
 			arraylist_test();
 			stringbuffer_test();
-			
+	
+		while(true) {
+	
 			System.out.println("Choose the question to check:");
 			Scanner scan = new Scanner(System.in);
 			int num = Integer.parseInt(scan.nextLine());
