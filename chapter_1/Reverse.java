@@ -9,3 +9,24 @@ public class Reverse {
 		return reverse;
 	}
 }
+
+/*This part contains the C/C++ method of same function
+ * void reverse(char *str) {
+ * 	char* end;
+ *  char tmp;
+ *  
+ * 	if(str){
+ *  	while(*end) {
+ *  		++end;
+ *  	}
+ *  	--end;
+ *  	
+ *  	while(str < end) {
+ *  		tmp = *str;
+ *  		*str++ = *end;
+ *  		*end-- = tmp;
+ *  	}
+ *  }
+ * }
+ *
+ */ 
