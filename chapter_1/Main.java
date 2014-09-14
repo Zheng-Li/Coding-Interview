@@ -31,6 +31,9 @@ public class Main {
 			case 4: 
 				question_4(scan);
 				break;
+			case 5:
+				question_5(scan);
+				break;
 			default: 
 				System.out.println("Invalid question number!");
 				return;
@@ -71,7 +74,7 @@ public class Main {
 	}
 	
 	public static void question_2(Scanner scan) {
-		//reverse a string
+		//reverse a string in C++/Java
 		System.out.println("Reverse the string: ");
 		String input = scan.nextLine();
 		Reverse reverse = new Reverse();
@@ -93,5 +96,13 @@ public class Main {
 		String sp = scan.nextLine();
 		ReplaceSpaces rp = new ReplaceSpaces();
 		System.out.println(rp.replaceSpace(sp));
+	}
+	
+	public static void question_5(Scanner scan) {
+		//Compress the String with the counts of the repeated characters
+		System.out.println("Show a sample string for compression:");
+		String cp = scan.nextLine();
+		Compress com = new Compress();
+		System.out.println(com.compress(cp));
 	}
 }
