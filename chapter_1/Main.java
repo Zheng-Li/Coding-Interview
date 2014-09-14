@@ -28,6 +28,9 @@ public class Main {
 			case 3: 
 				question_3(scan);
 				break;
+			case 4: 
+				question_4(scan);
+				break;
 			default: 
 				System.out.println("Invalid question number!");
 				return;
@@ -68,6 +71,14 @@ public class Main {
 	}
 	
 	public static void question_2(Scanner scan) {
+		//reverse a string
+		System.out.println("Reverse the string: ");
+		String input = scan.nextLine();
+		Reverse reverse = new Reverse();
+		System.out.println(reverse.reverse(input));
+	}
+	
+	public static void question_3(Scanner scan) {
 		//Check sentences as permutation
 		System.out.println("Check Sentence permutation:");
 		String s1 = scan.nextLine();
@@ -76,7 +87,7 @@ public class Main {
 		System.out.println(pm.permutation(s1, s2));
 	}
 	
-	public static void question_3(Scanner scan) {
+	public static void question_4(Scanner scan) {
 		//Replace all the spaces with "%20"
 		System.out.println("Show a sample sentence:");
 		String sp = scan.nextLine();
