@@ -13,7 +13,12 @@ public class Main {
 	
 			System.out.println("Choose the question to check:");
 			Scanner scan = new Scanner(System.in);
-			int num = Integer.parseInt(scan.nextLine());
+			int num = 0;
+			try {
+				num = Integer.parseInt(scan.nextLine());
+			} catch (NumberFormatException efe){
+				efe.printStackTrace();
+			}
 			
 			switch(num) {
 			case 0: 
