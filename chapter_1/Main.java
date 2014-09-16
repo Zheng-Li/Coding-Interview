@@ -5,10 +5,11 @@ import java.util.Scanner;
 public class Main {
 	public static void main(String[] args) {
 		
+		/* This is the test for 3 datatype:
 			hashmap_test();
 			arraylist_test();
 			stringbuffer_test();
-	
+		*/
 		while(true) {
 	
 			System.out.println("Choose the question to check:");
@@ -38,6 +39,12 @@ public class Main {
 				break;
 			case 5:
 				question_5(scan);
+				break;
+			case 6:
+				question_6(scan);
+				break;
+			case 7:
+				question_7(scan);
 				break;
 			default: 
 				System.out.println("Invalid question number!");
@@ -109,5 +116,19 @@ public class Main {
 		String cp = scan.nextLine();
 		Compress com = new Compress();
 		System.out.println(com.compress(cp));
+	}
+	
+	public static void question_6(Scanner scan) {
+		//Rotate a N*N matrix by 90 degrees.
+		System.out.println("Give the initial matrix size:");
+		int size = Integer.parseInt(scan.nextLine());
+		Rotation rot = new Rotation(size);
+		int[][] source = rot.get_original_matrix();
+		int[][] rotate = rot.clockwise_rotate(source, size);
+		int[][] counter_rotate = rot.counter_clockwise_rotate(rotate, size);
+	}
+	
+	public static void question_7(Scanner scan) {
+		
 	}
 }
