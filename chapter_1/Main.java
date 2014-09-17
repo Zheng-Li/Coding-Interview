@@ -46,6 +46,9 @@ public class Main {
 			case 7:
 				question_7(scan);
 				break;
+			case 8:
+				question_8(scan);
+				break;
 			default: 
 				System.out.println("Invalid question number!");
 				return;
@@ -129,6 +132,15 @@ public class Main {
 	}
 	
 	public static void question_7(Scanner scan) {
+		//Clear the entire row and column when there's 0 in a M*N matrix
+		System.out.println("Give me the size of the original matrix(by 'row' and 'column'):");
+		int row = Integer.parseInt(scan.next());
+		int column = Integer.parseInt(scan.next());
+		Clear_zero cz = new Clear_zero(row, column);
+		cz.clear();
+	}
+	
+	public static void question_8(Scanner scan) {
 		
 	}
 }
