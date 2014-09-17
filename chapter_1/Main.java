@@ -141,6 +141,15 @@ public class Main {
 	}
 	
 	public static void question_8(Scanner scan) {
-		
+		System.out.println("Give me the First string:");
+		String s1 = scan.nextLine();
+		System.out.println("Give me the Second string:");
+		String s2 = scan.nextLine();
+		Substring ss = new Substring();
+		if(ss.is_rotation(s1, s2)) {
+			System.out.println(s2 + " is rotation of " + s1);
+		} else {
+			System.out.println(s2 + " is not rotation of" + s2);
+		}
 	}
 }
