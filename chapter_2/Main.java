@@ -49,6 +49,7 @@ public class Main {
 	}
 	
 	public static void question_1(Scanner scan) {
+		System.out.println("");
 		
 	}
 	

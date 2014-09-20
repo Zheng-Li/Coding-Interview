@@ -1,5 +1,7 @@
 package chapter_2;
 
+import java.util.Hashtable;
+
 public class LinkedListNode {
 	private LinkedListNode next = null;
 	private int data;
@@ -40,5 +42,22 @@ public class LinkedListNode {
 			head_node = head_node.next;
 		}
 		return head;
+	}
+	
+	//remove duplicate records in the LinkedList
+	public void remove_duplicate(LinkedListNode node) {
+		Hashtable nodes = new Hashtable();
+		LinkedListNode tmp = null;
+		
+		while(node.next != null) {
+			if(nodes.containsKey(node)) {
+				tmp.next = node.next;
+			} else {
+				nodes.put(node.data, true);
+				tmp = node;
+			}
+			node = node.next;
+		}
+		
 	}
  }
