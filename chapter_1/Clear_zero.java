@@ -7,6 +7,7 @@ public class Clear_zero {
 	private int row;
 	private int column;
 	
+	//Mark the columns and rows that have 0 in it
 	public Clear_zero(int row, int column) {
 		this.matrix = new int[row][column];
 		this.row = row;
@@ -22,6 +23,7 @@ public class Clear_zero {
 		System.out.println();
 	}
 	
+	//Cross reference with the true-false table created above and rebuilt the matrix
 	public void clear() {
 		//find out the row/column that has 0, indicate it with boolean set
 		int[][] matrix_clear = new int[row][column];

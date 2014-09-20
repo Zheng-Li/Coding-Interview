@@ -4,6 +4,7 @@ public class Rotation {
 	private int matrix_size;
 	private int[][] matrix;
 	
+	//Rotate the matrix by 90 degree
 	public Rotation(int size) {
 		if(size > 0) {
 			this.matrix_size = size;

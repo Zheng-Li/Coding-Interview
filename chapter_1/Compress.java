@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Compress {
+	
+	//Compress the String with the count of each letter
 	public String compress(String str) {
 		HashMap<String, Integer> map = new HashMap<String, Integer>();
 		ArrayList<String> char_order = new ArrayList<String>();
@@ -25,6 +27,7 @@ public class Compress {
 			compress_str += s + map.get(s);
 		}
 		
+		//Compare the compressed string and the original string
 		if(compress_str.length() < str.length()) {
 			return compress_str;
 		} else {

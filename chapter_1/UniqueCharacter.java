@@ -2,6 +2,7 @@ package chapter_1;
 
 public class UniqueCharacter {
 	
+	//Check if the string has duplicate characters
 	public boolean checkUnique (String str) {
 		if (str.length() > 256)
 			return false;

@@ -41,13 +41,38 @@ public class Main {
 			case 7:
 				question_7(scan);
 				break;
-			case 8:
-				question_8(scan);
-				break;
 			default: 
 				System.out.println("Invalid question number!");
 				return;
 			}
 		}
+	}
+	
+	public static void question_1(Scanner scan) {
+		
+	}
+	
+	public static void question_2(Scanner scan) {
+		
+	}
+	
+	public static void question_3(Scanner scan) {
+		
+	}
+	
+	public static void question_4(Scanner scan) {
+		
+	}
+	
+	public static void question_5(Scanner scan) {
+		
+	}
+	
+	public static void question_6(Scanner scan) {
+		
+	}
+	
+	public static void question_7(Scanner scan) {
+		
 	}
 }

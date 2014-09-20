@@ -141,6 +141,7 @@ public class Main {
 	}
 	
 	public static void question_8(Scanner scan) {
+		//Check if 2nd string is the rotation of the 1st string
 		System.out.println("Give me the First string:");
 		String s1 = scan.nextLine();
 		System.out.println("Give me the Second string:");
