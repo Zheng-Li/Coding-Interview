@@ -48,29 +48,23 @@ public class Main {
 		}
 	}
 	
+	//Question 1: Remove duplicate record from the linkedlist
 	public static void question_1(Scanner scan) {
 		System.out.println("Remove duplicate records in a LinkedList-----------");
-		System.out.println("The original LinkedList is: ");
-		LinkedListNode head = new LinkedListNode(Integer.parseInt(scan.next()));
-		
-		while(scan.hasNext()) {
-			String s = scan.next();
-			if(s.equals("done")) {
-				break;
-			} else {
-				head.add_node(Integer.parseInt(s));
-			}
-		}
-		
+		LinkedListNode head = create_linkedlist(scan);
 		head.remove_duplicate(head);
-		while(head != null) {
-			System.out.print(head.get_data() + " ");
-			head = head.next;
-		}
 	}
 	
+	//Question 2: Find kth to last element in the linkedlist
 	public static void question_2(Scanner scan) {
+		System.out.println("Find the kth to last element in a LinkedList----------");
+		LinkedListNode head = create_linkedlist(scan);
 		
+		System.out.println("Which element do you want from the last?");
+		int k = Integer.parseInt(scan.next());
+		
+		int element = head.kth_to_last(head, k).get_data();
+		System.out.println("The kth to last element is: " + element);
 	}
 	
 	public static void question_3(Scanner scan) {
@@ -91,5 +85,20 @@ public class Main {
 	
 	public static void question_7(Scanner scan) {
 		
+	}
+	
+	public static LinkedListNode create_linkedlist(Scanner scan) {
+		System.out.println("The original LinkedList is: ");
+		LinkedListNode head = new LinkedListNode(Integer.parseInt(scan.next()));
+		
+		while(scan.hasNext()) {
+			String s = scan.next();
+			if(s.equals("done")) {
+				break;
+			} else {
+				head.add_node(Integer.parseInt(s));
+			}
+		}
+		return head;
 	}
 }

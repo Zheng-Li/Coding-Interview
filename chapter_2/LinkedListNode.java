@@ -59,5 +59,26 @@ public class LinkedListNode {
 			}
 			tmp = tmp.next;
 		}
+		
+		head.show_linkedlist(head);
+	}
+	
+	//Find the kth to last element in singly linked list
+	public LinkedListNode kth_to_last(LinkedListNode head, int k) {
+		LinkedListNode window_start = head;
+		LinkedListNode window_end = head;
+		
+		for(int i=0; i<k; i++) {
+			if()
+		}
+	}
+	
+	//Print out the result linkedlist
+	public void show_linkedlist(LinkedListNode head) {
+		while(head != null) {
+			System.out.print(head.get_data() + " ");
+			head = head.next;
+		}
+		System.out.println();
 	}
  }
