@@ -67,7 +67,14 @@ public class Main {
 		System.out.println("The kth to last element is: " + element);
 	}
 	
+	//Question 3: Delete a node in the middle of a LinkedList
 	public static void question_3(Scanner scan) {
+		System.out.println("Delete a node in the middle of the LinkedList-----------");
+		LinkedListNode head = create_linkedlist(scan);
+		
+		System.out.println("Which element do you want to delete?");
+		int k = Integer.parseInt(scan.next());
+		
 		
 	}
 	
