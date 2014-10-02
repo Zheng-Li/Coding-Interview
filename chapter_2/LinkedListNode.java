@@ -124,4 +124,12 @@ public class LinkedListNode {
 		}
 		return null;
 	}
+	
+	//Part the linkedlist by value x
+	public LinkedListNode partition(LinkedListNode head, int x) {
+		LinkedListNode less = null;
+		LinkedListNode more = null;
+		
+		return less;
+	}
  }

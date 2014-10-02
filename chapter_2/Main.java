@@ -80,8 +80,16 @@ public class Main {
 		head.show_linkedlist(head);
 	}
 	
+	//Question 4: Partition a linkedlist by value x, so that small nodes come before large ones
 	public static void question_4(Scanner scan) {
+		System.out.println("Partition a linkedlist by a given value--------------------");
+		LinkedListNode head  = create_linkedlist(scan);
 		
+		System.out.println("The paritition value is:");
+		int x = Integer.parseInt(scan.next());
+		
+		LinkedListNode new_head = head.partition(head, x);
+		head.show_linkedlist(new_head);
 	}
 	
 	public static void question_5(Scanner scan) {
