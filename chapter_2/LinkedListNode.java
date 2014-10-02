@@ -68,9 +68,24 @@ public class LinkedListNode {
 		LinkedListNode window_start = head;
 		LinkedListNode window_end = head;
 		
-		for(int i=0; i<k; i++) {
-			if()
+		//Set up a k length window
+		for(int i=1; i<k; i++) {
+			if(window_end.next != null) {
+				window_end = window_end.next;
+			} else {
+				System.out.println("Not enough elements in LinkedLIst!");
+			}
 		}
+		
+		//Move the window simultaneously to the end
+		while(window_end.next != null) {
+			window_start = window_start.next;
+			window_end = window_end.next;
+		}
+		
+		System.out.println(window_start.get_data());
+		System.out.println(window_end.get_data());
+		return window_start;
 	}
 	
 	//Print out the result linkedlist
