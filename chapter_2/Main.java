@@ -75,7 +75,9 @@ public class Main {
 		System.out.println("Which element do you want to delete?");
 		int k = Integer.parseInt(scan.next());
 		
-		
+		LinkedListNode x = head.get_node(k);
+		head.delete_node(x);
+		head.show_linkedlist(head);
 	}
 	
 	public static void question_4(Scanner scan) {

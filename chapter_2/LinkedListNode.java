@@ -10,6 +10,10 @@ public class LinkedListNode {
 		this.data = data;
 	}
 	
+	public void set_data(int data) {
+		this.data = data;
+	}
+	
 	public int get_data() {
 		return this.data;
 	}
@@ -42,6 +46,20 @@ public class LinkedListNode {
 			head_node = head_node.next;
 		}
 		return head;
+	}
+	
+	//Delete node without access to the head
+	public boolean delete_node(LinkedListNode n) {
+		//copy the next node to overwrite this node and delete the next node
+		if(n == null || n.next == null) {
+			System.out.println("Invalid node...(Null node or Last node)");
+			return false;
+		}
+		
+		LinkedListNode next = n.next;
+		n.set_data(next.get_data());
+		n.next = next.next;
+		return true;
 	}
 	
 	//remove duplicate records in the LinkedList
@@ -93,5 +111,17 @@ public class LinkedListNode {
 			head = head.next;
 		}
 		System.out.println();
+	}
+	
+	//Get the specified node by data
+	public LinkedListNode get_node(int data) {
+		LinkedListNode tmp = this;
+		while(tmp.next != null) {
+			if(tmp.get_data() == data) {
+				return tmp;
+			}
+			tmp = tmp.next;
+		}
+		return null;
 	}
  }
