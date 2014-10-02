@@ -130,6 +130,26 @@ public class LinkedListNode {
 		LinkedListNode less = null;
 		LinkedListNode more = null;
 		
+		while(head != null) {
+			if(head.get_data() < x) {
+				if(less == null) {
+					less = new LinkedListNode(head.get_data());
+				} else {
+					less.add_node(head.get_data());
+				}
+			} else {
+				if(more == null) {
+					more = new LinkedListNode(head.get_data());
+				} else {
+					more.add_node(head.get_data());
+				}
+			}
+			head = head.next;
+		}
+		
+		less.show_linkedlist(less);
+		more.show_linkedlist(more);
+		
 		return less;
 	}
  }
