@@ -77,14 +77,12 @@ public class LinkedListNode {
 			}
 		}
 		
-		//Move the window simultaneously to the end
+		//Move the window to the end
 		while(window_end.next != null) {
 			window_start = window_start.next;
 			window_end = window_end.next;
 		}
 		
-		System.out.println(window_start.get_data());
-		System.out.println(window_end.get_data());
 		return window_start;
 	}
 	
