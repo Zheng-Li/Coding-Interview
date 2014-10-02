@@ -3,7 +3,7 @@ package chapter_2;
 import java.util.Hashtable;
 
 public class LinkedListNode {
-	private LinkedListNode next = null;
+	LinkedListNode next = null;
 	private int data;
 	
 	public LinkedListNode(int data) {
@@ -19,7 +19,7 @@ public class LinkedListNode {
 		LinkedListNode new_node = new LinkedListNode(node_data);
 		LinkedListNode current_node = this;
 		
-		while(current_node != null) {
+		while(current_node.next != null) {
 			current_node = current_node.next;
 		}
 		current_node.next = new_node;
@@ -45,19 +45,19 @@ public class LinkedListNode {
 	}
 	
 	//remove duplicate records in the LinkedList
-	public void remove_duplicate(LinkedListNode node) {
-		Hashtable nodes = new Hashtable();
-		LinkedListNode tmp = null;
+	public void remove_duplicate(LinkedListNode head) {
+		Hashtable node_table = new Hashtable();
+		LinkedListNode tmp = head;
+		LinkedListNode node = null;
 		
-		while(node.next != null) {
-			if(nodes.containsKey(node)) {
-				tmp.next = node.next;
+		while(tmp != null) {
+			if(node_table.containsKey(tmp.data)) {
+				node.next = tmp.next;
 			} else {
-				nodes.put(node.data, true);
-				tmp = node;
+				node_table.put(tmp.data, true);
+				node = tmp;
 			}
-			node = node.next;
+			tmp = tmp.next;
 		}
-		
 	}
  }

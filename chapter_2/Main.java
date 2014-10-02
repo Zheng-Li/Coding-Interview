@@ -49,8 +49,24 @@ public class Main {
 	}
 	
 	public static void question_1(Scanner scan) {
-		System.out.println("");
+		System.out.println("Remove duplicate records in a LinkedList-----------");
+		System.out.println("The original LinkedList is: ");
+		LinkedListNode head = new LinkedListNode(Integer.parseInt(scan.next()));
 		
+		while(scan.hasNext()) {
+			String s = scan.next();
+			if(s.equals("done")) {
+				break;
+			} else {
+				head.add_node(Integer.parseInt(s));
+			}
+		}
+		
+		head.remove_duplicate(head);
+		while(head != null) {
+			System.out.print(head.get_data() + " ");
+			head = head.next;
+		}
 	}
 	
 	public static void question_2(Scanner scan) {
