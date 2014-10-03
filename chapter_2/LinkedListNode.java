@@ -125,10 +125,20 @@ public class LinkedListNode {
 		return null;
 	}
 	
+	//Get the specified node
+	public LinkedListNode get_tail_node() {
+		LinkedListNode tail = this;
+		while(tail.next != null) {
+			tail = tail.next;
+		}
+		return tail;
+	}
+	
 	//Part the linkedlist by value x
 	public LinkedListNode partition(LinkedListNode head, int x) {
 		LinkedListNode less = null;
 		LinkedListNode more = null;
+		LinkedListNode merge_point = null;
 		
 		while(head != null) {
 			if(head.get_data() < x) {
@@ -147,8 +157,9 @@ public class LinkedListNode {
 			head = head.next;
 		}
 		
-		less.show_linkedlist(less);
-		more.show_linkedlist(more);
+		//Merge the two linkedlist
+		merge_point = less.get_tail_node();
+		merge_point.next = more;
 		
 		return less;
 	}
