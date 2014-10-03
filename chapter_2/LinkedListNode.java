@@ -160,6 +160,7 @@ public class LinkedListNode {
 		//Merge the two linkedlist
 		merge_point = less.get_tail_node();
 		merge_point.next = more;
+		
 		return less;
 	}
  }
