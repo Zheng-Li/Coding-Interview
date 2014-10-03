@@ -135,7 +135,7 @@ public class LinkedListNode {
 				if(less == null) {
 					less = new LinkedListNode(head.get_data());
 				} else {
-					less.add_node(head.get_data());
+					less.add_node(head.get_data());	
 				}
 			} else {
 				if(more == null) {
@@ -146,9 +146,11 @@ public class LinkedListNode {
 			}
 			head = head.next;
 		}
-		
+	
 		less.show_linkedlist(less);
 		more.show_linkedlist(more);
+		
+		//Merge the 2 linkedlist
 		
 		return less;
 	}
