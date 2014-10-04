@@ -92,8 +92,13 @@ public class Main {
 		head.show_linkedlist(new_head);
 	}
 	
+	//Question 5: Use linkedlist to achieve mathematical add function
 	public static void question_5(Scanner scan) {
+		System.out.println("Use linkedlist to to add two numbers-------------------");
+		int number_1 = Integer.parseInt(scan.next());
+		int number_2 = Integer.parseInt(scan.next());
 		
+		System.out.println("The result is:");
 	}
 	
 	public static void question_6(Scanner scan) {
