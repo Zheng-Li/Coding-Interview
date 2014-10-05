@@ -6,6 +6,8 @@ public class LinkedListNode {
 	LinkedListNode next = null;
 	private int data;
 	
+	public LinkedListNode() {}
+	
 	public LinkedListNode(int data) {
 		this.data = data;
 	}
@@ -165,11 +167,10 @@ public class LinkedListNode {
 	
 	//Add two numbers by linkedlist
 	public LinkedListNode add(LinkedListNode l1, LinkedListNode l2, int carry) {
-		if(carry == 0 && l1.get_data() ==0 && l2.get_data() ==0) {
+		LinkedListNode result = new LinkedListNode();
+		if(carry == 0 && l1 == null && l2 == null) {
 			return null;
 		}
-		
-		LinkedListNode result = new LinkedListNode();
 		
 		//Add value from carry, l1 and l2
 		int value = carry;
@@ -179,7 +180,16 @@ public class LinkedListNode {
 		if(l2 != null) {
 			value = value + l2.get_data();
 		}
+		result.set_data(value%10);
 		
-		
+		//Reverse
+		if(l1 != null || l2 != null) {
+			LinkedListNode more = add(l1 == null ? null : l1.next,
+					l2 == null ? null : l2.next,
+					value >= 10 ? 1 : 0);
+			result.next = more;
+		}
+	
+		return result;
 	}	
  }

@@ -97,13 +97,14 @@ public class Main {
 		System.out.println("Use linkedlist to to add two numbers-------------------");
 		int number_1 = Integer.parseInt(scan.next());
 		int number_2 = Integer.parseInt(scan.next());
-		LinkedListNode result = null;
 		
 		System.out.println("The result is:");
-		int_to_linkedlist(number_1);
+		LinkedListNode l1 = int_to_linkedlist(number_1);
 		System.out.print("+ ");
-		int_to_linkedlist(number_2);
+		LinkedListNode l2 = int_to_linkedlist(number_2);
 		System.out.print("= ");
+		LinkedListNode result = l1.add(l1, l2, 0);
+		result.show_linkedlist(result);
 	}
 	
 	public static void question_6(Scanner scan) {
