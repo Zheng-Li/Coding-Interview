@@ -162,4 +162,11 @@ public class LinkedListNode {
 		merge_point.next = more;
 		return less;
 	}
+	
+	//Add two numbers by linkedlist
+	public LinkedListNode add(LinkedListNode l1, LinkedListNode l2, int carry) {
+		if(carry == 0 && l1.get_data() ==0 && l2.get_data() ==0) {
+			return null;
+		}
+	}	
  }
