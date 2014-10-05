@@ -97,8 +97,13 @@ public class Main {
 		System.out.println("Use linkedlist to to add two numbers-------------------");
 		int number_1 = Integer.parseInt(scan.next());
 		int number_2 = Integer.parseInt(scan.next());
+		LinkedListNode result = null;
 		
 		System.out.println("The result is:");
+		int_to_linkedlist(number_1);
+		System.out.print("+ ");
+		int_to_linkedlist(number_2);
+		System.out.print("= ");
 	}
 	
 	public static void question_6(Scanner scan) {
@@ -122,5 +127,26 @@ public class Main {
 			}
 		}
 		return head;
+	}
+	
+	//Transfer from a number to a linkedlist
+	public static LinkedListNode int_to_linkedlist(int num) {
+		LinkedListNode num_node;
+		
+		if(num <= 0) {
+			System.out.println("Zero and Negative numbers not supported!");
+			return null;
+		}
+		
+		num_node = new LinkedListNode(num%10);
+		System.out.print(num%10 + " ");
+		num = num/10;
+		while(num != 0) {
+			num_node.add_node(num%10);
+			System.out.print(num%10 + " ");
+			num = num/10;
+		}
+		
+		return num_node;
 	}
 }
