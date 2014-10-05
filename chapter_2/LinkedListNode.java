@@ -168,5 +168,18 @@ public class LinkedListNode {
 		if(carry == 0 && l1.get_data() ==0 && l2.get_data() ==0) {
 			return null;
 		}
+		
+		LinkedListNode result = new LinkedListNode();
+		
+		//Add value from carry, l1 and l2
+		int value = carry;
+		if(l1 != null) {
+			value = value + l1.get_data();
+		}
+		if(l2 != null) {
+			value = value + l2.get_data();
+		}
+		
+		
 	}	
  }
