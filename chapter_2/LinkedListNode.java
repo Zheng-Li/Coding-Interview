@@ -1,6 +1,7 @@
 package chapter_2;
 
 import java.util.Hashtable;
+import java.util.Stack;
 
 public class LinkedListNode {
 	LinkedListNode next = null;
@@ -212,5 +213,33 @@ public class LinkedListNode {
 	
 		System.out.println("The start point of the loop is " + slow_runner.get_data());
 		return slow_runner;
+	}
+	
+	//Check if a linkedlist is a palindrome by using stack
+	public boolean is_palindrome(LinkedListNode head) {
+		//Only need to check half of the nodes in linkedlist, using fast_runner and slow_runner
+		LinkedListNode fast = head;
+		LinkedListNode slow = head;
+		
+		Stack<Integer> stack = new Stack<Integer>();
+		
+		while(fast != null && fast.next != null) {
+			stack.push(slow.get_data());
+			slow = slow.next;
+			fast = fast.next.next;
+		}
+		
+		//Skip the middle node when there's odd number of nodes
+		if(fast != null) {
+			slow = slow.next;
+		}
+		
+		while(slow != null) {
+			if(slow.get_data() != stack.pop()) {
+				return false;
+			}
+			slow = slow.next;
+		}
+		return true;
 	}
  }

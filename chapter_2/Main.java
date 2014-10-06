@@ -117,8 +117,18 @@ public class Main {
 		loop_list.find_start_point(loop_list);
 	}
 	
+	//Check if a linkedlist is a palindrome, such as 1-2-3-2-1
 	public static void question_7(Scanner scan) {
+		System.out.println("Check if a linkedlist is a palindrome------------------------");
+		LinkedListNode head = create_linkedlist(scan);
 		
+		boolean status = head.is_palindrome(head);
+		
+		if(status) {
+			System.out.println("Yes, it is a palindrome.");
+		} else {
+			System.out.println("No, it is not a palindrome.");
+		}
 	}
 	
 	public static LinkedListNode create_linkedlist(Scanner scan) {
