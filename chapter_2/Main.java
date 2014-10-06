@@ -6,7 +6,6 @@ public class Main {
 	
 	public static void main(String[] args) {
 		while(true) {
-			
 			System.out.println("Choose the question to check:");
 			Scanner scan = new Scanner(System.in);
 			int num = 0;
