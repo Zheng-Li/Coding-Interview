@@ -182,7 +182,7 @@ public class LinkedListNode {
 		}
 		result.set_data(value%10);
 		
-		//Reverse
+		//Reverse 
 		if(l1 != null || l2 != null) {
 			LinkedListNode more = add(l1 == null ? null : l1.next,
 					l2 == null ? null : l2.next,
@@ -192,4 +192,25 @@ public class LinkedListNode {
 	
 		return result;
 	}	
+	
+	//Find the loop start point in a linkedlist
+	public LinkedListNode find_start_point(LinkedListNode head) {
+		LinkedListNode slow_runner = head;
+		LinkedListNode fast_runner = head;
+		
+		while(fast_runner != null && fast_runner.next != null) {
+			slow_runner = slow_runner.next;
+			fast_runner = fast_runner.next.next;
+			if(fast_runner == slow_runner) break;
+		}
+		
+		slow_runner = head;
+		while(slow_runner != fast_runner) {
+			slow_runner = slow_runner.next;
+			fast_runner = fast_runner.next;
+		}
+	
+		System.out.println("The start point of the loop is " + slow_runner.get_data());
+		return slow_runner;
+	}
  }

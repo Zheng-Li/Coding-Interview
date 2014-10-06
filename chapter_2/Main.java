@@ -107,8 +107,14 @@ public class Main {
 		result.show_linkedlist(result);
 	}
 	
+	//Find the loop point within a linkedlist
 	public static void question_6(Scanner scan) {
+		System.out.println("Find out the loop point within a linkedlist----------------");
+		LinkedListNode loop_list = create_linkedlist(scan);
+		LinkedListNode loop_tail = loop_list.get_tail_node();
+		loop_tail.next = loop_list.next.next.next.next; // random test loop point
 		
+		loop_list.find_start_point(loop_list);
 	}
 	
 	public static void question_7(Scanner scan) {
@@ -150,4 +156,5 @@ public class Main {
 		
 		return num_node;
 	}
+	
 }
