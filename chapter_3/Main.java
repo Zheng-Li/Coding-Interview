@@ -46,8 +46,10 @@ public class Main {
 		}
 	}
 	
+	//Question 1: Implement array for 3 stacks
 	public static void question_1 (Scanner scan) {
-		
+		System.out.println("Implement 3 stacks in 1 arraylist----------------");
+		Array_Stack stack = new Array_Stack();
 	}
 	
 	public static void question_2 (Scanner scan) {
