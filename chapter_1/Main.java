@@ -10,8 +10,12 @@ public class Main {
 			arraylist_test();
 			stringbuffer_test();
 		*/
-		while(true) {
+		choose_question();
+	}
 	
+	//Choose question from chapter
+	public static void choose_question() {
+		while(true) {
 			System.out.println("Choose the question to check:");
 			Scanner scan = new Scanner(System.in);
 			int num = 0;
