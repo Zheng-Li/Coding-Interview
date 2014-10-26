@@ -7,7 +7,8 @@ public class Main {
 //		test();
 		choose_question();
 	}
-	
+
+	//Test case for questions
 	public static void test() {
 		Array_Stack array = new Array_Stack(10);
 		int a=1; int b=3; int c=5; int d=4; int f=2;
@@ -29,7 +30,6 @@ public class Main {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
 	}
 	
 	//Choose question from chapter
@@ -135,8 +135,19 @@ public class Main {
 		stack.show_result();
 	}
 	
+	//Question 2: Stack with min()
 	public static void question_2 (Scanner scan) {
-		
+		System.out.println("Populate the stack:");
+		Stack_with_min stack = new Stack_with_min();
+		while(scan.hasNext()) {
+			String input = scan.next();
+			if(input.equals("done")) {
+				break;
+			}
+			int value = Integer.parseInt(input);
+			stack.push(value);
+		}
+		System.out.println("The minimum value is " + stack.min());
 	}
 	
 	public static void question_3 (Scanner scan) {
