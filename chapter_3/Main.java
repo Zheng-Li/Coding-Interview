@@ -137,6 +137,7 @@ public class Main {
 	
 	//Question 2: Stack with min()
 	public static void question_2 (Scanner scan) {
+		System.out.println("Stack that with min() method that returns minimum value---------------");
 		System.out.println("Populate the stack:");
 		Stack_with_min stack = new Stack_with_min();
 		while(scan.hasNext()) {
@@ -150,8 +151,20 @@ public class Main {
 		System.out.println("The minimum value is " + stack.min());
 	}
 	
+	//Question 3: Set of Stacks that creates new stack when old one exceeds threshold
 	public static void question_3 (Scanner scan) {
-		
+		System.out.println("Set of stacks with fixed stack size------------------");
+		System.out.println("Populate the stack with more than 10 numbers:");
+		Set_Of_Stack stack_set = new Set_Of_Stack(10);
+		while(scan.hasNext()) {
+			String input = scan.next();
+			if(input.equals("done")) {
+				break;
+			}
+			int value = Integer.parseInt(input);
+			stack_set.push(value);
+		}
+		stack_set.show_all();
 	}
 	
 	public static void question_4 (Scanner scan) {
