@@ -139,7 +139,7 @@ public class Main {
 	public static void question_2 (Scanner scan) {
 		System.out.println("Stack that with min() method that returns minimum value---------------");
 		System.out.println("Populate the stack:");
-		Stack_with_min stack = new Stack_with_min();
+		Stack_With_Min stack = new Stack_With_Min();
 		while(scan.hasNext()) {
 			String input = scan.next();
 			if(input.equals("done")) {
@@ -182,8 +182,20 @@ public class Main {
 		towers[0].move_disks_to(num, towers[2], towers[1]);
 	}
 	
+	//Question 5: Implementing MyQueue by two stacks
 	public static void question_5 (Scanner scan) {
-		
+		System.out.println("Implementing MyQueue by 2 stacks----------------------------------------");
+		System.out.println("Populate the queue:");
+		My_Queue<Integer> queue = new My_Queue<Integer>();
+		while(scan.hasNext()) {
+			String input = scan.next();
+			if(input.equals("done")) {
+				break;
+			}
+			int value = Integer.parseInt(input);
+			queue.enqueue(value);
+		}
+		System.out.println(queue.peek());
 	}
 	
 	public static void question_6 (Scanner scan) {

@@ -2,9 +2,9 @@ package chapter_3;
 
 import java.util.Stack;
 
-public class Stack_with_min extends Stack<Integer>{
+public class Stack_With_Min extends Stack<Integer>{
 	private Stack<Integer> min_stack;
-	public Stack_with_min() {
+	public Stack_With_Min() {
 		min_stack = new Stack<Integer>();
 	}
 	
