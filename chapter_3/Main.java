@@ -216,7 +216,21 @@ public class Main {
 		sorting.sort(stack);
 	}
 	
+	//Question 7: Cat and Dog adoption problem.(Always adopt the oldest dog/cat)
 	public static void question_7 (Scanner scan) {
-		
+		System.out.println("Fist-In-First-Out Animal Shelter---------------------------------------------");
+		Animal_Queue aq = new Animal_Queue();
+		System.out.println("Which kind of animal do you want to adopt? (Any:0 Dog:1 Cat:2)");
+		int value = scan.nextInt();
+		switch(value) {
+		case 0: System.out.println(aq.dequeue_any().name);
+				break;
+		case 1: System.out.println(aq.dequeue_dog().name);
+				break;
+		case 2: System.out.println(aq.dequeue_cat().name);
+				break;
+		default : System.out.println("Error!");
+				break;
+		}
 	}
 }
