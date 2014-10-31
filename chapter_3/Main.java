@@ -1,6 +1,7 @@
 package chapter_3;
 
 import java.util.Scanner;
+import java.util.Stack;
 
 public class Main {
 	public static void main(String[] args) {
@@ -198,8 +199,21 @@ public class Main {
 		System.out.println(queue.peek());
 	}
 	
+	//Question 6: Sorting a stack without using other data structure
 	public static void question_6 (Scanner scan) {
-		
+		System.out.println("Sorting a stack in ascending order-----------------------------------");
+		System.out.println("Populate the original stack: ");
+		Stack<Integer> stack = new Stack<Integer>();
+		while(scan.hasNext()) {
+			String input = scan.next();
+			if(input.equals("done")) {
+				break;
+			}
+			int value = Integer.parseInt(input);
+			stack.push(value);
+		}
+		Sort sorting = new Sort();
+		sorting.sort(stack);
 	}
 	
 	public static void question_7 (Scanner scan) {
