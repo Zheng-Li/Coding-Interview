@@ -167,8 +167,19 @@ public class Main {
 		stack_set.show_all();
 	}
 	
+	//Question 4: Classic game Tower of Hanoi
 	public static void question_4 (Scanner scan) {
-		
+		System.out.println("The game of Hanoi----------------------------");
+		Tower[] towers = new Tower[3];
+		for(int i=0; i<3; i++) {
+			towers[i] = new Tower(i);
+		}
+		System.out.println("How many disks are there in the Towers:");
+		int num = scan.nextInt();
+		for(int j=num-1; j>=0; j--) {
+			towers[0].add_disk(j);
+		}
+		towers[0].move_disks_to(num, towers[2], towers[1]);
 	}
 	
 	public static void question_5 (Scanner scan) {
