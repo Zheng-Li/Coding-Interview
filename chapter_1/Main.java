@@ -84,24 +84,25 @@ public class Main {
 		sbe.joinWords(words);
 	}
 	
+	
+	//Question 1: Check sentence has unique characters
 	public static void question_1(Scanner scan) {
-		//Check sentence has unique characters
 		System.out.println("Check Sentence Uniqueness:");
 		String input = scan.nextLine();
 		UniqueCharacter uc = new UniqueCharacter();
 		System.out.println(uc.checkUnique(input));
 	}
 	
-	public static void question_2(Scanner scan) {
-		//reverse a string in C++/Java
+	//Question 2: Reverse a string in C++/Java
+	public static void question_2(Scanner scan) {		
 		System.out.println("Reverse the string: ");
 		String input = scan.nextLine();
 		Reverse reverse = new Reverse();
 		System.out.println(reverse.reverse(input));
 	}
 	
+	//Question 3: Check sentences permutation
 	public static void question_3(Scanner scan) {
-		//Check sentences as permutation
 		System.out.println("Check Sentence permutation:");
 		String s1 = scan.nextLine();
 		String s2 = scan.nextLine();
@@ -109,24 +110,24 @@ public class Main {
 		System.out.println(pm.permutation(s1, s2));
 	}
 	
+	//Question 4: Replace all the spaces with "%20"
 	public static void question_4(Scanner scan) {
-		//Replace all the spaces with "%20"
 		System.out.println("Show a sample sentence:");
 		String sp = scan.nextLine();
 		ReplaceSpaces rp = new ReplaceSpaces();
 		System.out.println(rp.replaceSpace(sp));
 	}
 	
+	//Question 5: Compress the String with the counts of the repeated characters	
 	public static void question_5(Scanner scan) {
-		//Compress the String with the counts of the repeated characters
 		System.out.println("Show a sample string for compression:");
 		String cp = scan.nextLine();
 		Compress com = new Compress();
 		System.out.println(com.compress(cp));
 	}
 	
+	//Question 6: Rotate a N*N matrix by 90 degrees.
 	public static void question_6(Scanner scan) {
-		//Rotate a N*N matrix by 90 degrees.
 		System.out.println("Give the initial matrix size:");
 		int size = Integer.parseInt(scan.nextLine());
 		Rotation rot = new Rotation(size);
@@ -135,8 +136,8 @@ public class Main {
 		int[][] counter_rotate = rot.counter_clockwise_rotate(rotate, size);
 	}
 	
+	//Question 7: Clear the entire row and column when there's 0 in a M*N matrix
 	public static void question_7(Scanner scan) {
-		//Clear the entire row and column when there's 0 in a M*N matrix
 		System.out.println("Give me the size of the original matrix(by 'row' and 'column'):");
 		int row = Integer.parseInt(scan.next());
 		int column = Integer.parseInt(scan.next());
@@ -144,8 +145,8 @@ public class Main {
 		cz.clear();
 	}
 	
+	//Question 8: Check if 2nd string is the rotation of the 1st string
 	public static void question_8(Scanner scan) {
-		//Check if 2nd string is the rotation of the 1st string
 		System.out.println("Give me the First string:");
 		String s1 = scan.nextLine();
 		System.out.println("Give me the Second string:");
