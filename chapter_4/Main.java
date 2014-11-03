@@ -1,7 +1,5 @@
 package chapter_4;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -65,16 +63,9 @@ public class Main {
 		
 	}
 	
+	//Question 2: 
 	public static void question_2(Scanner scan) {
-		Test test = new Test();;
-		List<String> list = new ArrayList<String>();
-		list.add("123");
-		list.add("ignore");
-		list.add("456");
-		list.add("ignore");
-		list.add("123");
-		list.add("789");
-		test.parse(list);
+		
 	}
 
 	public static void question_3(Scanner scan) {
