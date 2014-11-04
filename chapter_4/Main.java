@@ -2,6 +2,7 @@ package chapter_4;
 
 import java.util.Scanner;
 
+
 public class Main {
 	public static void main(String[] args) {
 		choose_question();
@@ -60,7 +61,29 @@ public class Main {
 	//Question 1: Check if a tree is balanced
 	public static void question_1(Scanner scan) {
 		System.out.println("Check if a tree is balanced----------------------------------");
+		TreeNode root = new TreeNode(0);
+		TreeNode lv1_1 = new TreeNode(1);
+		TreeNode lv1_2 = new TreeNode(2);
+		TreeNode lv2_1 = new TreeNode(3);
+		TreeNode lv2_2 = new TreeNode(4);
+		TreeNode lv2_3 = new TreeNode(5);
+		TreeNode lv2_4 = new TreeNode(6);
+		TreeNode lv3 = new TreeNode(7);
 		
+		root.setLeft(lv1_1);
+		root.setRight(lv1_2);
+		lv1_1.setLeft(lv2_1);
+		lv1_1.setRight(lv2_2);
+		lv1_2.setLeft(lv2_3);
+		lv1_2.setRight(lv2_4);
+		lv2_3.setLeft(lv3);
+		
+		Tree_Algorithm ta = new Tree_Algorithm();
+		if(ta.is_balanced(root)) {
+			System.out.println("Balanced!!!");
+		} else {
+			System.out.println("Unbalanced!!!");
+		}
 	}
 	
 	//Question 2: 

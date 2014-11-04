@@ -1,6 +1,5 @@
 package chapter_4;
 
-import javax.swing.tree.TreeNode;
 
 public class Tree_Algorithm {
 	public boolean is_balanced(TreeNode root) {
@@ -17,12 +16,12 @@ public class Tree_Algorithm {
 			return 0;
 		}
 		
-		int left_height = check_height(node.getChildAt(0));
+		int left_height = check_height(node.getLeft());
 		if(left_height == -1) {
 			return -1;
 		}
 		
-		int right_height = check_height(node.getChildAt(1));
+		int right_height = check_height(node.getRight());
 		if(right_height == -1) {
 			return -1;
 		}
