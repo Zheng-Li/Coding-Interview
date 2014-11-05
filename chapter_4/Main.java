@@ -76,7 +76,7 @@ public class Main {
 		lv1_1.setRight(lv2_2);
 		lv1_2.setLeft(lv2_3);
 		lv1_2.setRight(lv2_4);
-		lv2_3.setLeft(lv3);
+//		lv2_3.setLeft(lv3);
 		
 		Tree_Algorithm ta = new Tree_Algorithm();
 		if(ta.is_balanced(root)) {
@@ -86,9 +86,17 @@ public class Main {
 		}
 	}
 	
-	//Question 2: 
+	//Question 2: Find route in directed graph
 	public static void question_2(Scanner scan) {
-		
+		System.out.println("Find possible path within directed graph----------------------------------------");		
+		DirectedGraph dg = new DirectedGraph();
+		Node start = dg.getNodes().get(4);
+		Node end = dg.getNodes().get(0);
+		if(dg.search(dg, start, end)) {
+			System.out.println("There's path between " + start.getValue() + " and " + end.getValue());
+		} else {
+			System.out.println("There's no path between " + start.getValue() + " and " + end.getValue());
+		}
 	}
 
 	public static void question_3(Scanner scan) {
