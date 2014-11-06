@@ -1,9 +1,10 @@
 package chapter_4;
 
+
 public class TreeNode {
 	private int value;
-	private TreeNode left;
-	private TreeNode right;
+	protected TreeNode left;
+	protected TreeNode right;
 	
 	public TreeNode(int value) {
 		this.value = value;
@@ -26,6 +27,6 @@ public class TreeNode {
 	}
 	
 	public void showTreeNode(TreeNode node) {
-		
+		//Unfinished to show the layout of the binary tree
 	}
 }

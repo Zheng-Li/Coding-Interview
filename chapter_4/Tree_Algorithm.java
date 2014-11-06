@@ -33,4 +33,37 @@ public class Tree_Algorithm {
 			return Math.max(left_height, right_height) + 1;
 		}
 	}
+	
+	public TreeNode createMinHeightTree(int[] nodes, int start, int end) {
+		if(start > end) {
+			return null;
+		}
+		int mid = (end + start)/2;
+		TreeNode root = new TreeNode(nodes[mid]);
+		root.left = createMinHeightTree(nodes, start, mid-1);
+		root.right = createMinHeightTree(nodes, mid+1, end);
+		return root;
+	}
+	
+	public int getHeight(TreeNode root) {
+		int leftHeight;
+		int rightHeight;
+		
+		if(root.left != null) {
+			leftHeight = getHeight(root.left);
+		} else {
+			leftHeight = 0;
+		}
+		if(root.right != null) {
+			rightHeight = getHeight(root.right);
+		} else {
+			rightHeight = 0;
+		}
+		
+		if(leftHeight >= rightHeight) {
+			return leftHeight+1;
+		} else {
+			return rightHeight+1;
+		}
+	}
 }

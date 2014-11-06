@@ -99,8 +99,13 @@ public class Main {
 		}
 	}
 
+	//Question 3: Binary search tree for sorted array
 	public static void question_3(Scanner scan) {
-		
+		System.out.println("Create a binary search tree for sorted array---------------------------------------");
+		Tree_Algorithm ta = new Tree_Algorithm();
+		int[] nodes = {1,2,3,4,5,6,7,8,9,11,13,16,17,19,21};
+		TreeNode root = ta.createMinHeightTree(nodes, 0, nodes.length-1);
+		System.out.println(ta.getHeight(root));
 	}
 	
 	public static void question_4(Scanner scan) {
