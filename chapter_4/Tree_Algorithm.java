@@ -1,5 +1,7 @@
 package chapter_4;
 
+import java.util.ArrayList;
+
 
 public class Tree_Algorithm {
 	public boolean is_balanced(TreeNode root) {
@@ -65,5 +67,22 @@ public class Tree_Algorithm {
 		} else {
 			return rightHeight+1;
 		}
+	}
+	
+	public void inOrderTraversal(TreeNode root, ArrayList<Integer> array) {
+		if(root == null) return;
+		inOrderTraversal(root.left, array);
+		array.add(root.getValue());
+		inOrderTraversal(root.right, array);
+	}
+	
+	public boolean checkBST(ArrayList<Integer> array) {
+		//Assuming there's no duplicate records in the tree
+		for(int i=1; i<array.size(); i++) {
+			if(array.get(i) <= array.get(i-1)) {
+				return false;
+			}
+		}
+		return true;
 	}
 }

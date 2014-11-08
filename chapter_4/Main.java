@@ -1,5 +1,6 @@
 package chapter_4;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 
@@ -100,8 +101,14 @@ public class Main {
 		root.showTree(root);
 	}
 	
+	//Question 5: Check if a binary tree is a binary search tree
 	public static void question_5(Scanner scan) {
-		
+		System.out.println("Check if a binary tree is a binary search tree-----------------------------------------");
+		Tree_Algorithm ta = new Tree_Algorithm();
+		ArrayList<Integer> array = new ArrayList<Integer>();
+		TreeNode root = sampleTree();
+		ta.inOrderTraversal(root, array);
+		System.out.println(ta.checkBST(array));
 	}
 
 	public static void question_6(Scanner scan) {
@@ -128,7 +135,7 @@ public class Main {
 		TreeNode lv2_2 = new TreeNode(4);
 		TreeNode lv2_3 = new TreeNode(5);
 		TreeNode lv2_4 = new TreeNode(6);
-		TreeNode lv3 = new TreeNode(7);
+//		TreeNode lv3 = new TreeNode(7);
 		
 		root.setLeft(lv1_1);
 		root.setRight(lv1_2);
