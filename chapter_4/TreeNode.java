@@ -8,29 +8,37 @@ public class TreeNode {
 	private int value;
 	protected TreeNode left;
 	protected TreeNode right;
+	protected TreeNode parent;
 	
 	public TreeNode(int value) {
 		this.value = value;
+		this.parent = null;
 	}
 	
 	public TreeNode getLeft() {
-		return left;
+		return this.left;
 	}
 	
 	public void setLeft(TreeNode node) {
 		left = node;
+		node.parent = this;
 	}
 	
 	public TreeNode getRight() {
-		return right;
+		return this.right;
 	}
 	
 	public void setRight(TreeNode node) {
 		right = node;
+		node.parent = this;
 	}
 	
 	public int getValue() {
 		return value;
+	}
+	
+	public TreeNode getParent() {
+		return this.parent;
 	}
 	
 	public ArrayList<LinkedList<TreeNode>> showTree(TreeNode root) {

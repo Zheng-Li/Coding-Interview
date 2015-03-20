@@ -70,10 +70,11 @@ public class Tree_Algorithm {
 	}
 	
 	public void inOrderTraversal(TreeNode root, ArrayList<Integer> array) {
+		TreeNode n = root;
 		if(root == null) return;
-		inOrderTraversal(root.left, array);
-		array.add(root.getValue());
-		inOrderTraversal(root.right, array);
+		inOrderTraversal(n.left, array);
+		array.add(n.getValue());
+		inOrderTraversal(n.right, array);
 	}
 	
 	public boolean checkBST(ArrayList<Integer> array) {
@@ -85,4 +86,35 @@ public class Tree_Algorithm {
 		}
 		return true;
 	}
+	
+	public TreeNode getNextNode(TreeNode root, TreeNode node) {
+		if(node == null) {
+			return null;
+		}
+		
+		if(node.getRight() != null) {
+			return getLeftMost(node.getRight());
+		} else {
+			TreeNode n = node;
+			TreeNode p = n.getParent();
+			while(p != null && p.getLeft() != n) {
+				n = p;
+				p = p.getParent();
+			}
+			return p;
+		}
+	}
+	
+	public TreeNode getLeftMost(TreeNode root) {
+		if (root == null) {
+			return null;
+		}
+		
+		TreeNode tmp = root;
+		while(root.getLeft() != null) {
+			tmp = root.getLeft();
+		}
+		return tmp;
+	}
+	
 }

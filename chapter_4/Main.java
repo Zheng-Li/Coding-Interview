@@ -108,11 +108,28 @@ public class Main {
 		ArrayList<Integer> array = new ArrayList<Integer>();
 		TreeNode root = sampleTree();
 		ta.inOrderTraversal(root, array);
-		System.out.println(ta.checkBST(array));
-	}
-
-	public static void question_6(Scanner scan) {
+		System.out.println(array);
+		if (ta.checkBST(array)) {
+			System.out.println("This is a binary search tree.");
+		} else {
+			System.out.println("This is NOT a binary search tree/");
+		}
 		
+	}
+	
+	// Question 6: Find the "Next" node (in-order successor) in a binary search tree -----------------------------
+	public static void question_6(Scanner scan) {
+		System.out.println("Find the \"Next\" node in binary search tree --------------");
+		Tree_Algorithm ta = new Tree_Algorithm();
+		ArrayList<Integer> array = new ArrayList<Integer>();
+		TreeNode root = sampleTree();
+		TreeNode node = root.getRight().getRight();
+		System.out.println(node.getValue());
+		if(ta.getNextNode(root, node) != null) {
+			System.out.println(ta.getNextNode(root, node).getValue());
+		} else {
+			System.out.println("This is the right-most node of the tree!");
+		}
 	}
 	
 	public static void question_7(Scanner scan) {
